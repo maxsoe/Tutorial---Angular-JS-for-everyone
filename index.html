@@ -41,27 +41,34 @@
       fill: green;
     }
 
-    ul.ng-enter {
-      transition: 0.3s ease all;
+  li.ng-enter {
+    animation: fadeIn 0.3s linear;
+  }
+
+  @keyframes fadeIn {
+    from{
       opacity: 0;
-      transform: translateX(-100%);
     }
-
-    ul.ng-enter.ng-enter-active {
+    to {
       opacity: 1;
-      transform: translateX(0);
+    }
+  }
+
+    /*li.ng-enter.ng-enter-active {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    ul.ng-leave {
+    li.ng-leave {
       transition: 0.3s ease all;
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
 
-    ul.ng-leave.ng-leave-active {
+    li.ng-leave.ng-leave-active {
       opacity: 0;
-      transform: translateX(-100%);
-    }
+      transform: translateY(10px);
+    }*/
 
   </style>
 </head>
