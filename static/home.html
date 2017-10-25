@@ -1,0 +1,14 @@
+<h1>Homepage</h1>
+
+<input type="text" ng-model="search" name="" value="">
+<ul ng-if="dirList.toggle">
+  <li ng-repeat="item in dirList.list| filter:search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'" ng-include="'person.html'">
+  </li>
+</ul>
+<button ng-hide="dirList.toggle" ng-click="dirList.toggle = true">Show names</button>
+<button ng-hide="!dirList.toggle" ng-click="dirList.toggle = false">Hide names</button>
+<form ng-submit="dirList.addPerson()">
+  <input type="text" placeholder="Name" ng-model="dirList.name">
+  <input type="number" placeholder="Age" ng-model="dirList.age">
+  <input type="submit" name="" value="Submit">
+</form>

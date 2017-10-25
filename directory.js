@@ -6,10 +6,11 @@ angular.module('directoryApp', ['ngAnimate', 'ui.router'])
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'home.html'
+        templateUrl: '/static/home.html',
+        controller: 'directoryController as dirList'
       })
       .state('about', {
-        url: '/about',
+        url: '/static/about',
         templateUrl: 'about.html'
       });
   })
