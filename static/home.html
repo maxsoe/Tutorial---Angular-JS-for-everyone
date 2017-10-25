@@ -5,6 +5,7 @@
   <li ng-repeat="item in dirList.list| filter:search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'" ng-include="'person.html'">
   </li>
 </ul>
+<hello-world></hello-world>
 <button ng-hide="dirList.toggle" ng-click="dirList.toggle = true">Show names</button>
 <button ng-hide="!dirList.toggle" ng-click="dirList.toggle = false">Hide names</button>
 <form ng-submit="dirList.addPerson()">

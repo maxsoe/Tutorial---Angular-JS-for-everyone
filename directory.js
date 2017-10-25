@@ -14,6 +14,7 @@ angular.module('directoryApp', ['ngAnimate', 'ui.router'])
         templateUrl: 'about.html'
       });
   })
+
   .controller('directoryController', function() {
 
     var dirList = this;
@@ -50,4 +51,10 @@ angular.module('directoryApp', ['ngAnimate', 'ui.router'])
       dirList.name = '';
       dirList.age = 0;
     };
+  })
+
+  .directive('helloWorld', function() {
+    return {
+      template: 'Hello World'
+    }
   });
